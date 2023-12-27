@@ -25,4 +25,4 @@ Let's connect and innovate together! 🚀✨
 ## Connect with Me
 
 - [LinkedIn](https://www.linkedin.com/in/dinithipurna/)
-- [Blog](https://yourblogurl.com)
+- [Blog](https://medium.com/@dmdinithipurna)
