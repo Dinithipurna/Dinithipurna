@@ -1,6 +1,8 @@
 # Dinithi Dissanayake
 
-Welcome to my GitHub profile(My personal page is currently under construction, so hope you get a rough idea of myself and my work through this page:D)! I'm Dinithi Dissanayake, a passionate researcher and Data Engineer currently pursuing a Ph.D. in Computing at the National University of Singapore (NUS). I completed my undergraduate degree in Electronic and Telecommunication Engineering at the University of Moratuwa, Sri Lanka in July 2022.
+Welcome to my GitHub profile(My personal page is currently under construction, so hope you get a rough idea of myself and my work through this page:D)! 
+
+I'm Dinithi Dissanayake, a passionate researcher and Data Engineer currently pursuing a Ph.D. in Computing at the National University of Singapore (NUS). I completed my undergraduate degree in Electronic and Telecommunication Engineering at the University of Moratuwa, Sri Lanka in July 2022.
 
 ## What I do ...
 
