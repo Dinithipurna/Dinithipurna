@@ -1,0 +1,247 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+/* header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+} */
+
+/* Header */
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px 0;
+}
+
+/* Container to keep everything centered */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Keeps it centered */
+    margin: 0 auto; /* Centers it horizontally */
+    padding: 0 20px; /* Prevents it from touching the edges */
+}
+
+/* Left Side (Name & Title) */
+.header-left h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.header-left p {
+    margin: 5px 0 0;
+    font-size: 16px;
+    opacity: 0.8; /* Slightly faded */
+}
+
+/* Right Side (Links) */
+.header-right {
+    display: flex;
+    gap: 15px;
+}
+
+/* Style links */
+.header-right a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.3s;
+}
+
+/* Hover effect */
+.header-right a:hover {
+    color: #007bff;
+}
+
+/* Icons */
+.header-right i {
+    font-size: 18px;
+}
+
+
+/* Main Layout */
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 10px auto;
+    border: 3px solid white;
+}
+
+.container {
+    display: flex;
+    max-width: 90%;
+    margin: auto;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Left Panel (About Me) */
+.about-me {
+    flex: 1;
+    max-width: 30%;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    text-align: justify;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Institution Logos */
+.logos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.logos img {
+    max-width: 80px; /* Keeps original ratio */
+    height: auto;
+    object-fit: contain;
+    padding: 5px;
+}
+
+
+.news-container {
+    width: 100%;
+    max-height: 400px; /* Adjust height to fit five items */
+    overflow-y: auto; /* Enables scrolling */
+    border: 1px solid #ddd; /* Ensure border is applied on all sides */
+    padding: 10px;
+    box-sizing: border-box; /* Ensures padding doesn't push the border out */
+}
+
+.news-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.news-list li {
+    padding: 8px 0;
+}
+
+/* Right Panel (Projects) */
+.projects {
+    flex: 2;
+    max-width: 65%;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Project Widgets */
+.project-widget {
+    /* width: 80%; */
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    background: #f9f9f9;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+/* Hide project content initially */
+.project-content {
+    max-height: 0;
+    text-align: justify;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+    padding: 0px;
+}
+
+/* Expanded state */
+.project-widget.expanded .project-content {
+    max-height: 500px; /* Large enough to fit content */
+    padding-top: 10px;
+}
+
+.project-widget h3 {
+    margin: 0;
+    color: #000000;
+}
+
+.project-widget img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.projects {
+    flex: 2;
+    max-width: 100%;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    margin-top: 20px; 
+} 
+
+/* ======== MOBILE RESPONSIVENESS ======== */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-me, .projects {
+        max-width: 90%;
+        width: 100%;
+    }
+
+    .logos img {
+        max-width: 60px; /* Smaller logos for smaller screens */
+    }
+
+    .project-widget {
+        padding: 12px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        font-size: 18px;
+        padding: 15px;
+    }
+
+    .logos img {
+        max-width: 50px;
+    }
+
+    .project-widget {
+        font-size: 13px;
+        padding: 10px;
+    }
+}

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinithi Dissanayake | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="header-left">
+                <p>This page is still under construction! but you can get a gist of me through this:D</p>
+                <p> **  </p>
+                <h1>Dinithi Dissanayake</h1>
+                <p>HCI Enthusiast | AI/ML Researcher</p>
+               
+                
+            </div>
+            <div class="header-right">
+                <a href="https://scholar.google.com/citations?user=BEVuaFQAAAAJ&hl=en&oi=ao" target="_blank">
+                    <i class="fas fa-graduation-cap"></i> Scholar
+                </a>
+                <a href="https://www.linkedin.com/in/dinithipurna" target="_blank">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="https://www.linkedin.com/in/dinithipurna/" target="_blank">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="mailto:dinithi@ahlab.org">
+                    <i class="fas fa-envelope"></i> Email
+                </a>
+                <a href="https://drive.google.com/file/d/1GJmoqsA_pDpHbZKRl9ORy0rQqvFVBVdR/view?usp=sharing" target="_blank">
+                    <i class="fas fa-file-alt"></i> CV
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Left Panel (About Me + Institution Logos) -->
+        <section class="about-me">
+            <h2>About Me</h2>
+            <img src="assets/Dinithi.jpg" alt="Dinithi Dissanayake" class="profile-pic">
+            <p>I am passionate about leveraging data analytics, machine learning, and deep learning to develop 
+                solutions that enhance human decision-making and improve user experiences. My current PhD research focuses on 
+                Human-Computer Interaction (HCI) and Virtual Reality. 
+                <!-- As a self-motivated learner, I thrive on exploring 
+                emerging technologies and interdisciplinary approaches to collaborating across fields envisioning to push the boundaries 
+                of AI-driven insights into human experiences and advancing the understanding of human behavior.</p> -->
+            <!-- <p>With a background in **Electronic & Telecommunication Engineering** (University of Moratuwa, **First-Class Honors**), I specialize in **AI-driven decision-making, explainable AI, and user interaction analysis**.</p> -->
+            
+            <h2>News</h2>
+            <div class="news-container">
+                <ul class="news-list">
+                    <li><b>Feb 2025</b> - Our paper "VRSense" got accepted to CHI LBW 2025, See you at Japan!</li>
+                    <li><b>Sep 2024</b> - Started a part-time internship at AHLab + Meta Reality Labs collaboration.</li>
+                    <li><b>Sep 2024</b> - Passed my Qualifying Examination! Now officially a PhD Candidate.</li>
+                    <li><b>Aug 2023</b> - Began my PhD at the National University of Singapore (NUS).</li>
+                    <li><b>Jan 2023</b> - Started working as a part-time Data Analytics Consultant at LIRNEasia.</li>
+                    <li><b>May 2022</b> - Joined Axiata Digital Labs as a Data Engineer.</li>
+                    <li><b>Aug 2022</b> - Received my Bachelor's degree in Electronic and Telecommunication Engineering
+                        with First Class Honors from the University of Moratuwa, Sri Lanka.</li>
+                    <li><b>June 2022</b> - Our work <b>CrossPoint</b> was presented as a full paper at <b>CVPR 2022</b>.</li>
+                    <li><b>Oct 2022</b> - Our work <b>3DLatNav</b> was presented as a workshop paper at <b>ECCV 2022</b>.</li>
+                </ul>
+            </div>
+
+            
+            <div class="logos">
+                <img src="assets/National_University_of_Singapore_logo_NUS.png" alt="NUS">
+                <img src="assets/ahlab2.png" alt="AHLab">
+                <img src="assets/University_of_Moratuwa_logo.png" alt="Moratuwa">
+                <img src="assets/adl.png" alt="Axiata">
+                <img src="assets/lirne.png" alt="LIRNEasia">
+            </div>
+
+
+        </section>
+
+        <!-- Right Panel (Projects) -->
+        <section class="projects">
+            <h2>Research Projects</h2>
+            <div class="projects">
+                <div class="project-widget" onclick="toggleProject(this)">
+                    <h3>VRSense: An Explainable System to Help Mitigate Cybersickness in VR Games</h3>
+                    <img src="assets/VRSense.png" alt="Project Image" class="project-image">
+                    <div class="project-content">
+                        <p>VRsense is an explainable system developed to help VR game developers assess 
+                            cybersickness in their games. Unlike traditional black-box approaches, our system 
+                            utilizes engineered features to provide actionable insights into game design and user interactions. 
+                            Designed to be plug-and-play, VRSense allows any VR game developer to upload their data or run 
+                            VRHook on their gameplay, receiving valuable feedback on how effectively their game tackles
+                             motion sickness.</p>
+                    </div>
+                </div>
+            
+                <div class="project-widget" onclick="toggleProject(this)">
+                    <h3>3D Object Transformation and Regeneration for Privacy in Mixed Reality</h3>
+                    <img src="assets/FYP2.png" alt="Project Image" class="project-image">
+                    <div class="project-content">
+                        <p>We developed a novel, state-of-the-art 3D-2D correspondence technique to enhance the understanding 
+                            of 3D point clouds. Additionally, we created a 3D vision algorithm that allows users to add, delete, 
+                            or modify parts of 3D objects, enabling the regeneration of transformed objects on the other end. 
+                            Our solution was rigorously evaluated against a series of simulated privacy attacks. To assess its 
+                            real-world applicability, we implemented the algorithm on a smart device, testing its practicality 
+                            for deployment in Mixed Reality environments. This is the Final Year Project of my Undergraduate Studies.</p>
+                    </div>
+                </div>
+                <div class="project-widget" onclick="toggleProject(this)">
+                    <h3>Cultivating Pedagogy through a GenAI-Assisted Learning Tool</h3>
+                    <img src="assets/hopu.png" alt="Project Image" class="project-image">
+                    <div class="project-content">
+                        <p>The study explored how generative AI models, such as ChatGPT, contribute to value co-creation and 
+                            examined how the attitudes and impressions of non-technical users influence their adoption of such 
+                            technologies. This re- search aimed to understand how non-technical users interact with and respond 
+                            to the current generative AI hype in the domain of primary school education. Interviewed teachers and 
+                            developers centered around the adoption of a genAI-based education tool named Yuni/Hopu.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="project-widget">
+                <a href="https://github.com/Dinithipurna/VRNET" target="_blank">
+                    <h3>🔹 VR Motion Sickness Detection</h3>
+                    <p>Developed ML models using eye-tracking and physiological data to predict motion sickness in VR.</p>
+                </a>
+            </div>
+
+            <div class="project-widget">
+                <a href="https://github.com/Dinithipurna/3DLatNav" target="_blank">
+                    <h3>🔹 3D Object Transformation for Privacy</h3>
+                    <p>Designed a novel AI system for privacy in Mixed Reality, enabling 3D object modifications.</p>
+                </a>
+            </div>
+
+            <div class="project-widget">
+                <a href="https://arxiv.org/abs/2211.09770" target="_blank">
+                    <h3>🔹 Understanding Physiological Signals & Motion Sickness</h3>
+                    <p>Explored correlations between physiological signals and self-reported motion sickness in VR.</p>
+                </a>
+            </div>
+
+            <div class="project-widget">
+                <a href="https://github.com/Dinithipurna" target="_blank">
+                    <h3>🔹 AI for Urbanization Index</h3>
+                    <p>Developed ML pipelines to extract urbanization data from satellite imagery.</p>
+                </a>
+            </div> -->
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Dinithi Dissanayake</p>
+    </footer>
+    <script src="old/script.js"></script>
+</body>
+</html>
