@@ -103,21 +103,73 @@ header {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Institution Logos */
+.experience {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.experience h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
 .logos {
     display: flex;
     justify-content: center;
+    gap: 30px;
     flex-wrap: wrap;
-    gap: 15px;
-    margin-top: 15px;
+    padding: 20px;
 }
 
+/* Ensuring uniform logo size */
 .logos img {
-    max-width: 80px; /* Keeps original ratio */
-    height: auto;
+    width: 80px;  /* Adjust this size as needed */
+    height: 50px;  /* Ensures logos look uniform */
     object-fit: contain;
-    padding: 5px;
+    filter: grayscale(50%);
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
 }
+
+.logos img:hover {
+    transform: scale(1.1);
+    filter: grayscale(0%);
+}
+
+/* Tooltip Styling */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+.tooltip:hover::after {
+    opacity: 1;
+}
+
+/* Responsive for Mobile */
+@media screen and (max-width: 768px) {
+    .logos {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 
 
 .news-container {
