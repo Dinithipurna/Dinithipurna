@@ -245,3 +245,20 @@ footer {
         padding: 10px;
     }
 }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-left {
+        margin-bottom: 10px;
+    }
+
+    .header-right {
+        flex-direction: column;
+        align-items: center;
+    }
+}
