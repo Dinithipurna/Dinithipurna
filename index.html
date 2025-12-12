@@ -30,9 +30,9 @@
                 <a href="mailto:dinithi@ahlab.org">
                     <i class="fas fa-envelope"></i> Email
                 </a>
-                <!-- <a href="https://drive.google.com/file/d/1GJmoqsA_pDpHbZKRl9ORy0rQqvFVBVdR/view?usp=sharing" target="_blank">
-                    <i class="fas fa-file-alt"></i> CV
-                </a> -->
+                <a href="assets/Dinithi_Dissanayake_AcademicCV_short.pdf" target="_blank">
+                     <i class="fas fa-file-pdf"></i> CV
+                </a>
             </div>
         </div>
     </header>
@@ -42,11 +42,20 @@
         <section class="about-me">
             <h2>About Me</h2>
             <img src="assets/Dinithi.jpg" alt="Dinithi Dissanayake" class="profile-pic">
-            <p>I am passionate about leveraging data analytics, machine learning, and deep learning to develop 
+            <p>I am a PhD student at the National University of Singapore, working with
+                 <a href="https://ahlab.org/people/suranga-nanayakkara/" target="_blank">Prof. Suranga Nanayakkara</a> 
+                 in the Augmented Human Lab.</p> <p>My research sits at the intersection of Human–Computer Interaction and Applied AI, 
+                    where I explore how intelligent systems can truly understand people. I design models that sense cognitive and behavioral 
+                    cues, interpret user context, and adapt their responses in real time. Ultimately, my goal is to create wearable systems that feels 
+                    less like a tool and more like a supportive partner.</p>
+                <p>Generally I am passionate about leveraging data analytics, machine learning, and deep learning to build technologies that enhance human 
+                    decision-making and elevate user experiences; and I’m always excited to pursue anything that brings us closer to more intuitive, 
+                    human-aligned technology.</p>
+            <!-- <p>I am passionate about leveraging data analytics, machine learning, and deep learning to develop 
                 solutions that enhance human decision-making and improve user experiences. My current PhD research 
                 lies at the intersection of Human-Computer Interaction (HCI) and Applied AI. I am advised by 
                 <a href="https://ahlab.org/people/suranga-nanayakkara/" target="_blank">Prof. Suranga Nanayakkara</a> 
-                at the National University of Singapore (NUS), where I am part of the Augmented Human Lab (AHLab).</p>
+                at the National University of Singapore (NUS), where I am part of the Augmented Human Lab (AHLab).</p> -->
                 <!-- As a self-motivated learner, I thrive on exploring 
                 emerging technologies and interdisciplinary approaches to collaborating across fields envisioning to push the boundaries 
                 of AI-driven insights into human experiences and advancing the understanding of human behavior.</p> -->
@@ -108,6 +117,33 @@
         <section class="projects">
             <h2>Research Projects</h2>
             <div class="projects">
+                <div class="project-widget" onclick="toggleProject(this)">
+                    <h3>User-Aware Adaptive Assistive Wearables</h3>
+                    <img src="assets/SLR.png" alt="Project Image" class="project-image">
+                    <div class="project-content">
+                        <p>We conducted a systematic literature review of 63 papers examining how adaptive wearables sense user states,
+                             trigger context-aware interventions, and support real-time cognitive or behavioral feedback. 
+                             Our review introduces a taxonomy of sensing modalities, adaptation triggers, and intervention strategies, 
+                             and highlights key design challenges and opportunities. This work provides a foundation for developing 
+                             next-generation wearables that meaningfully adapt to users’ needs. 
+                             This paper is currently under review for publication.</p>
+                    </div>
+                </div>
+                <div class="project-widget" onclick="toggleProject(this)">
+                    <h3>Sensory Spotlight: Anticipating User Attention</h3>
+                    <img src="assets/SensorySpotlight.png" alt="Project Image" class="project-image">
+                    <div class="project-content">
+                        <p>Sensory Spotlight explores how AI can anticipate shifts in human attention 
+                            by combining audio and visual signals—much like how we naturally react to 
+                            sudden events in our environment. In the example above, a loud noise (a phone dropping) 
+                            is detected through audio, and the system predicts that the user’s attention will shift 
+                            toward the floor. Our predictive model not only predict user attention but also provides saliency to determine which modality got the spotlight.
+                            This helps to take adaptive decisions--where information should appear inside a smart-glasses display 
+                            and whether feedback should be delivered visually or through audio cues. By dynamically selecting the most 
+                            appropriate output modality, Sensory Spotlight brings us closer to intelligent, context-aware wearables 
+                            that adapt to how we perceive the world.</p>
+                    </div>
+                </div>
                 <div class="project-widget" onclick="toggleProject(this)">
                     <h3>VRSense: An Explainable System to Help Mitigate Cybersickness in VR Games</h3>
                     <img src="assets/VRSense.png" alt="Project Image" class="project-image">
