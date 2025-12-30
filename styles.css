@@ -1,316 +1,475 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+
+/* =========================
+   Base + Typography
+   ========================= */
+:root{
+  --bg: #f4f4f4;
+  --panel: #ffffff;
+  --text: #222;
+  --muted: #666;
+  --border: #e6e6e6;
+  --shadow: 0 6px 18px rgba(0,0,0,0.08);
+  --shadow-soft: 0 2px 10px rgba(0,0,0,0.06);
+  --radius: 12px;
+  --accent: #0b5fff;
 }
 
-/* Header */
-/* header {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
+*{ box-sizing: border-box; }
+
+html, body{
+  height: 100%;
+}
+
+body{
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+a{
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover{ text-decoration: underline; }
+
+/* =========================
+   Header
+   ========================= */
+header{
+  background-color: #333;
+  color: white;
+  padding: 14px 0;
+}
+
+.header-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /* Wider and consistent with main container */
+  width: min(1500px, 96vw);
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.header-left h1{
+  margin: 0;
+  font-size: 26px;
+  letter-spacing: 0.2px;
+}
+
+.header-left p{
+  margin: 6px 0 0;
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+.header-right{
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.header-right a{
+  color: white;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.header-right a:hover{
+  background: rgba(255,255,255,0.10);
+  color: #dbe8ff;
+  text-decoration: none;
+}
+
+.header-right i{ font-size: 18px; }
+
+/* =========================
+   Main Layout
+   ========================= */
+.container{
+  display: flex;
+  gap: 22px;
+  padding: 22px 0;
+
+  width: min(1500px, 96vw);
+  margin: 0 auto;
+}
+
+.about-me,
+.right-panel{
+  background: var(--panel);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  overflow-y: auto;
+}
+
+.about-me{
+  flex: 0 0 30%;
+  padding: 22px;
+}
+
+.right-panel{
+  flex: 1;
+  padding: 18px 18px 22px;
+  min-width: 0; /* prevents overflow in flex layouts */
+}
+
+/* Make text blocks easier to read */
+.about-me p{
+  margin: 10px 0;
+  text-align: left;
+  color: #2a2a2a;
+}
+
+h2{
+  margin: 10px 0 14px;
+  font-size: 28px;
+  letter-spacing: 0.2px;
+}
+
+.panel-title{
+  margin-top: 14px;
+}
+
+/* Profile */
+/* .profile-pic{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 14px auto 16px;
+  border: 3px solid #fff;
+  box-shadow: var(--shadow-soft);
 } */
 
-/* Header */
-header {
-    background-color: #333;
-    color: white;
-    padding: 15px 0;
+.profile-card{
+  width: 220px;
+  margin: 10px auto 18px;
+  padding: 10px 10px 14px;
+  background: #fff;
+  border: 1px solid #eaeaea;
+  border-radius: 16px;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.10);
+  text-align: center;
+  transform: rotate(-0.6deg);
 }
 
-/* Container to keep everything centered */
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px; /* Keeps it centered */
-    margin: 0 auto; /* Centers it horizontally */
-    padding: 0 20px; /* Prevents it from touching the edges */
+.profile-card img{
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 14px;
+  display: block;
 }
 
-/* Left Side (Name & Title) */
-.header-left h1 {
-    margin: 0;
-    font-size: 24px;
+/* .profile-card figcaption{
+  margin-top: 10px;
+  font-size: 13px;
+  color: #555;
+} */
+
+
+/* =========================
+   News
+   ========================= */
+.news-container{
+  width: 100%;
+  max-height: 220px;
+  overflow-y: auto;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 12px;
+  background: #fbfbfb;
 }
 
-.header-left p {
-    margin: 5px 0 0;
-    font-size: 16px;
-    opacity: 0.8; /* Slightly faded */
+.news-list{
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-/* Right Side (Links) */
-.header-right {
-    display: flex;
-    gap: 15px;
+.news-list li{
+  padding: 10px 0;
+  border-bottom: 1px dashed #e8e8e8;
+}
+.news-list li:last-child{ border-bottom: none; }
+
+/* =========================
+   Logos + Tooltips
+   ========================= */
+.experience{ text-align: center; margin: 18px 0 10px; }
+.experience h2{ font-size: 20px; margin-bottom: 10px; }
+
+.logos{
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  padding: 10px;
 }
 
-/* Style links */
-.header-right a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    transition: color 0.3s;
+.logos img{
+  width: 86px;
+  height: 54px;
+  object-fit: contain;
+  filter: grayscale(50%);
+  transition: transform 0.2s ease, filter 0.2s ease;
 }
 
-/* Hover effect */
-.header-right a:hover {
-    color: #007bff;
+.logos img:hover{
+  transform: scale(1.07);
+  filter: grayscale(0%);
 }
 
-/* Icons */
-.header-right i {
-    font-size: 18px;
+.tooltip{
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip box */
+.tooltip::after{
+  content: attr(data-tooltip);
+  position: absolute;
+
+  /* 👇 show ABOVE the logo */
+  bottom: 100%;
+  margin-bottom: 10px;
+
+  left: 50%;
+  transform: translateX(-50%);
+
+  background-color: rgba(25,25,25,0.96);
+  color: white;
+  padding: 8px 12px;
+  font-size: 13px;
+  line-height: 1.3;
+  border-radius: 10px;
+
+  min-width: 200px;
+  max-width: 260px;          /* 👈 prevents giant blocks */
+  white-space: normal;
+  text-align: center;
+
+  opacity: 0;
+  transition: opacity 0.15s ease-in-out, transform 0.15s ease-in-out;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+/* Fade + slight lift */
+.tooltip:hover::after{
+  opacity: 1;
+  transform: translateX(-50%) translateY(-4px);
 }
 
 
-/* Main Layout */
 
-.profile-pic {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    display: block;
-    margin: 10px auto;
-    border: 3px solid white;
+
+/* =========================
+   Tabs
+   ========================= */
+.tabs{
+  display: flex;
+  gap: 10px;
+  padding: 6px;
+  background: #f6f7f9;
+  border: 1px solid var(--border);
+  border-radius: 12px;
 }
 
-.container {
-    display: flex;
-    max-width: 90%;
-    margin: auto;
-    padding: 20px;
-    gap: 20px;
+.tab-button{
+  appearance: none;
+  border: 0;
+  background: transparent;
+  padding: 10px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  color: #333;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
-/* Left Panel (About Me) */
-.about-me {
-    flex: 1;
-    max-width: 30%;
-    padding: 20px;
-    background: white;
-    border-radius: 8px;
-    text-align: justify;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.tab-button:hover{ background: rgba(11,95,255,0.08); }
+
+.tab-button.active{
+  background: rgba(11,95,255,0.14);
+  color: #0b3fbf;
 }
 
-.experience {
+.tab-panel{ display: none; margin-top: 14px; }
+.tab-panel.active{ display: block; }
+
+/* =========================
+   Projects (accordion cards)
+   ========================= */
+.projects-list{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.project-widget{
+  padding: 16px;
+  border-radius: 12px;
+  background: #fafafa;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-soft);
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.project-widget:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.08);
+}
+
+.project-widget h3{
+  margin: 0;
+  font-size: 18px;
+}
+
+/* Collapsed: uniform thumbnail crop */
+.project-widget img{
+  width: 95%;
+  aspect-ratio: 20 / 4;
+  object-fit: cover;
+  display: block;
+  margin: 12px auto 0;
+  border-radius: 10px;
+  border: 1px solid #ededed;
+  background: #fff;
+}
+
+/* Expanded: show full image (no cropping) */
+.project-widget.expanded img{
+  width: 100%;          /* or keep 80% if you prefer */
+  max-height: 70vh;     /* prevents it from being too tall */
+  height: auto;
+
+  aspect-ratio: auto;   /* remove the fixed box */
+  object-fit: contain;  /* show the whole image */
+}
+
+
+/* Expand/collapse */
+.project-content{
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.28s ease-in-out, padding 0.28s ease-in-out;
+  padding: 10px;
+}
+
+.project-widget.expanded .project-content{
+  max-height: 600px;
+  padding-top: 10px;
+}
+
+.project-content p{
+  margin: 8px 0 0;
+  color: #2b2b2b;
+}
+
+/* =========================
+   Work + Blog cards
+   ========================= */
+.card-list{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.card{
+  background: #fafafa;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: var(--shadow-soft);
+}
+
+.card.muted{ opacity: 0.8; }
+
+.card-header{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.card-header h3{
+  margin: 0;
+  font-size: 18px;
+}
+
+.meta{
+  color: var(--muted);
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.card ul{
+  margin: 8px 0 0 18px;
+}
+
+.note{
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+/* =========================
+   Footer
+   ========================= */
+footer{
+  text-align: center;
+  padding: 12px;
+  background-color: #333;
+  color: white;
+  margin-top: 18px;
+}
+
+/* =========================
+   Responsive
+   ========================= */
+@media (max-width: 980px){
+  .container{ flex-direction: column; }
+  .about-me{ flex: 1; }
+  .right-panel{ flex: 1; }
+  .header-right{ justify-content: center; }
+}
+
+@media (max-width: 768px){
+  .header-container{
+    flex-direction: column;
     text-align: center;
-    margin-bottom: 30px;
-}
+    gap: 8px;
+  }
 
-.experience h2 {
-    font-size: 1.5em;
-    margin-bottom: 15px;
-}
-
-.logos {
-    display: flex;
+  .header-right{
     justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    padding: 20px;
+  }
+
+  h2{ font-size: 24px; }
+  .tabs{ flex-wrap: wrap; }
 }
 
-/* Ensuring uniform logo size */
-.logos img {
-    width: 80px;  /* Adjust this size as needed */
-    height: 50px;  /* Ensures logos look uniform */
-    object-fit: contain;
-    filter: grayscale(50%);
-    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
-}
-
-.logos img:hover {
-    transform: scale(1.1);
-    filter: grayscale(0%);
-}
-
-/* Tooltip Styling */
-.tooltip {
-    position: relative;
-    display: inline-block;
-}
-
-.tooltip::after {
-    content: attr(data-tooltip);
-    position: absolute;
-    bottom: -30px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #333;
-    color: white;
-    padding: 5px 10px;
-    font-size: 14px;
-    border-radius: 5px;
-    white-space: nowrap;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    pointer-events: none;
-}
-
-.tooltip:hover::after {
-    opacity: 1;
-}
-
-/* Responsive for Mobile */
-@media screen and (max-width: 768px) {
-    .logos {
-        flex-direction: column;
-        align-items: center;
-    }
+@media (max-width: 480px){
+  .header-left h1{ font-size: 22px; }
+  .header-right a{ padding: 7px 9px; }
+  .profile-pic{ width: 130px; height: 130px; }
 }
 
 
-
-.news-container {
-    width: 100%;
-    max-height: 400px; /* Adjust height to fit five items */
-    overflow-y: auto; /* Enables scrolling */
-    border: 1px solid #ddd; /* Ensure border is applied on all sides */
-    padding: 10px;
-    box-sizing: border-box; /* Ensures padding doesn't push the border out */
-}
-
-.news-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.news-list li {
-    padding: 8px 0;
-}
-
-/* Right Panel (Projects) */
-.projects {
-    flex: 2;
-    max-width: 65%;
-    padding: 20px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-
-/* Project Widgets */
-.project-widget {
-    /* width: 80%; */
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 8px;
-    background: #f9f9f9;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
-    cursor: pointer;
-}
-
-/* Hide project content initially */
-.project-content {
-    max-height: 0;
-    text-align: justify;
-    overflow: hidden;
-    transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
-    padding: 0px;
-}
-
-/* Expanded state */
-.project-widget.expanded .project-content {
-    max-height: 500px; /* Large enough to fit content */
-    padding-top: 10px;
-}
-
-.project-widget h3 {
-    margin: 0;
-    color: #000000;
-}
-
-.project-widget img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-top: 10px;
-}
-.projects {
-    flex: 2;
-    max-width: 100%;
-    padding: 20px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #333;
-    color: white;
-    margin-top: 20px; 
-} 
-
-/* ======== MOBILE RESPONSIVENESS ======== */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .about-me, .projects {
-        max-width: 90%;
-        width: 100%;
-    }
-
-    .logos img {
-        max-width: 60px; /* Smaller logos for smaller screens */
-    }
-
-    .project-widget {
-        padding: 12px;
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 480px) {
-    header {
-        font-size: 18px;
-        padding: 15px;
-    }
-
-    .logos img {
-        max-width: 50px;
-    }
-
-    .project-widget {
-        font-size: 13px;
-        padding: 10px;
-    }
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    .header-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .header-left {
-        margin-bottom: 10px;
-    }
-
-    .header-right {
-        flex-direction: column;
-        align-items: center;
-    }
-}
