@@ -36,90 +36,122 @@
     </header>
 
     <main class="container">
-        <!-- Left Panel (About Me + News + Logos) -->
-        <section class="about-me" aria-label="About me">
-            <!-- <h2>About Me</h2> -->
-            <!-- <img src="assets/Dinithi.jpg" alt="Portrait of Dinithi Dissanayake" class="profile-pic"> -->
-            <figure class="profile-card">
-                <img src="assets/DD2.JPG" alt="Dinithi Dissanayake">
-                <!-- <figcaption>Dinithi Dissanayake · PhD (NUS)</figcaption> -->
-            </figure>
+        <div class="main-tabs" role="tablist" aria-label="Main sections">
+            <button class="main-tab-button active" role="tab" aria-selected="true" data-tab="profile">Profile</button>
+            <button class="main-tab-button" role="tab" aria-selected="false" data-tab="research">Research Projects</button>
+            <button class="main-tab-button" role="tab" aria-selected="false" data-tab="work">Work Experience</button>
+        </div>
 
-            <p>
-                I am a PhD candidate at the National University of Singapore, working with
-                <a href="https://ahlab.org/people/suranga-nanayakkara/" target="_blank" rel="noopener">Prof. Suranga Nanayakkara</a>
-                in the Augmented Human Lab.
-            </p>
-            <p>
-                My research sits at the intersection of Human–Computer Interaction and Applied AI, where I explore how intelligent
-                systems can understand people through multimodal cues, interpret user context, and adapt their responses in real time.
-                Ultimately, I aim to create wearable systems that feel less like tools and more like supportive partners.
-            </p>
-            <p>
-                More broadly, I enjoy building data-driven systems, spanning ML modeling, prototyping, and deployment that improve decision-making
-                and everyday user experiences.
-            </p>
+        <section class="main-tab-panel active" role="tabpanel" data-tab-panel="profile" aria-label="Profile section">
+            <section class="hero-card" aria-label="About me">
+                <figure class="profile-card">
+                    <img src="assets/IMG_1157.jpg" alt="Dinithi Dissanayake">
+                    <!-- <figcaption>Dinithi Dissanayake · PhD (NUS)</figcaption> -->
+                </figure>
 
-            <h2>News</h2>
-            <div class="news-container" role="region" aria-label="News">
-                <ul class="news-list">
-                    <li><b>Feb 2025</b> – Our paper “VRSense” was accepted to CHI LBW 2025. See you in Japan!</li>
-                    <li><b>Sep 2024</b> – Started an internship via AHLab × Meta Reality Labs collaboration.</li>
-                    <li><b>Sep 2024</b> – Passed my Qualifying Examination. Now officially a PhD Candidate.</li>
-                    <li><b>Aug 2023</b> – Began my PhD at the National University of Singapore (NUS).</li>
-                    <li><b>Jan 2023</b> – Started Data Analytics consulting at LIRNEasia.</li>
-                    <li><b>May 2022</b> – Joined Axiata Digital Labs as a Data Engineer.</li>
-                    <li><b>Aug 2022</b> – Graduated with First Class Honors (Electronic & Telecommunication Engineering), University of Moratuwa.</li>
-                    <li><b>June 2022</b> – “CrossPoint” presented as a full paper at CVPR 2022.</li>
-                    <li><b>Oct 2022</b> – “3DLatNav” presented as a workshop paper at ECCV 2022.</li>
-                </ul>
-            </div>
-
-            <section class="experience">
-                <h2>Academic</h2>
-                <div class="logos academic">
-                    <a href="#" class="tooltip" data-tooltip="PhD Candidate at SoC, NUS; Aug 2023 – Present" aria-label="National University of Singapore logo">
-                        <img src="assets/National_University_of_Singapore_logo_NUS.png" alt="NUS">
-                    </a>
-                    <a href="#" class="tooltip" data-tooltip="Augmented Human Lab (AHLab); Aug 2023 – Present" aria-label="Augmented Human Lab logo">
-                        <img src="assets/ahl_logo.png" alt="AHLab">
-                    </a>
-                    <a href="#" class="tooltip" data-tooltip="BSc., University of Moratuwa; 2017 – 2022" aria-label="University of Moratuwa logo">
-                        <img src="assets/University_of_Moratuwa_logo.png" alt="Moratuwa">
-                    </a>
+                <div class="hero-copy">
+                    <p>
+                        I am a PhD candidate at the National University of Singapore, working with
+                        <a href="https://ahlab.org/people/suranga-nanayakkara/" target="_blank" rel="noopener">Prof. Suranga Nanayakkara</a>
+                        in the Augmented Human Lab.
+                    </p>
+                    <p>
+                        My research sits at the intersection of Human–Computer Interaction and Applied AI, where I explore how intelligent
+                        systems can understand people through multimodal cues, interpret user context, and adapt their responses in real time.
+                        Ultimately, I aim to create wearable systems that feel less like tools and more like supportive partners.
+                    </p>
+                    <p>
+                        More broadly, I enjoy building data-driven systems, spanning ML modeling, prototyping, and deployment that improve decision-making
+                        and everyday user experiences.
+                    </p>
+                    <p style="color: red;">
+                        I am looking for collaborators and internship opportunities in applied AI, HCI, and wearable tech. If you have an idea or project that could use my skills, please reach out!
+                    </p>
                 </div>
             </section>
 
-            <section class="experience">
-                <h2>Industry</h2>
-                <div class="logos industry">
-                    <a href="#" class="tooltip" data-tooltip="Data Engineer, Axiata Digital Labs; Oct 2021 – Jul 2023" aria-label="Axiata Digital Labs logo">
-                        <img src="assets/adl.png" alt="Axiata Digital Labs">
-                    </a>
-                    <a href="#" class="tooltip" data-tooltip="Data Analytics Consultant, LIRNEasia; Jan 2023 – Aug 2023" aria-label="LIRNEasia logo">
-                        <img src="assets/lirne.png" alt="LIRNEasia">
-                    </a>
-                    <a href="#" class="tooltip" data-tooltip="Research Intern, Meta Reality Labs x AHLab; Aug 2024 – Feb 2025" aria-label="Meta Reality Labs and AHLab logo">
-                        <img src="assets/Meta_AHL.png" alt="Meta Reality Labs × AHLab">
-                    </a>
+            <section class="content-section" aria-label="News">
+                <div class="section-heading">
+                    <h2>News</h2>
+                </div>
+                <div class="news-container" role="region" aria-label="News">
+                    <ul class="news-list">
+                        <li><b>April 2026</b> – Presenting our workshop paper at ABAW workshop in CVPR 2026, See you in Denver!</li>
+                        <li><b>Mar 2026</b> – We were placed third at the EMI challenge at ABAW workshop in CVPR 2026!</li>
+                        <li><b>Feb 2026</b> – Our paper “Interrupting Autopilot” was accepted to CHI LBW 2026. See you in Barcelona!</li>
+                        <li><b>Jan 2026</b> – Our Literature Review on User Aware Adaptive Assistive Wearables is in review at ACM computing Surveys!</li>
+                        <li><b>Feb 2025</b> – Our paper “VRSense” was accepted to CHI LBW 2025. See you in Japan!</li>
+                        <li><b>Sep 2024</b> – Started an internship via AHLab × Meta Reality Labs collaboration.</li>
+                        <li><b>Sep 2024</b> – Passed my Qualifying Examination. Now officially a PhD Candidate.</li>
+                        <li><b>Aug 2023</b> – Began my PhD at the National University of Singapore (NUS).</li>
+                        <li><b>Jan 2023</b> – Started Data Analytics consulting at LIRNEasia.</li>
+                        <li><b>May 2022</b> – Joined Axiata Digital Labs as a Data Engineer.</li>
+                        <li><b>Aug 2022</b> – Graduated with First Class Honors (Electronic & Telecommunication Engineering), University of Moratuwa.</li>
+                        <li><b>June 2022</b> – “CrossPoint” presented as a full paper at CVPR 2022.</li>
+                        <li><b>Oct 2022</b> – “3DLatNav” presented as a workshop paper at ECCV 2022.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="content-section" aria-label="Academic and industry affiliations">
+                <div class="section-heading">
+                    <h2>Affiliations</h2>
+                </div>
+
+                <div class="affiliations-grid">
+                    <article class="affiliation-block" aria-label="Academic affiliations">
+                        <h3>Academic</h3>
+                        <div class="logos academic">
+                            <a href="#" class="tooltip" data-tooltip="PhD Candidate at SoC, NUS; Aug 2023 – Present" aria-label="National University of Singapore logo">
+                                <img src="assets/National_University_of_Singapore_logo_NUS.png" alt="NUS">
+                            </a>
+                            <a href="#" class="tooltip" data-tooltip="Augmented Human Lab (AHLab); Aug 2023 – Present" aria-label="Augmented Human Lab logo">
+                                <img src="assets/ahl_logo.png" alt="AHLab">
+                            </a>
+                            <a href="#" class="tooltip" data-tooltip="BSc., University of Moratuwa; 2017 – 2022" aria-label="University of Moratuwa logo">
+                                <img src="assets/University_of_Moratuwa_logo.png" alt="Moratuwa">
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="affiliation-block" aria-label="Industry affiliations">
+                        <h3>Industry</h3>
+                        <div class="logos industry">
+                            <a href="#" class="tooltip" data-tooltip="Data Engineer, Axiata Digital Labs; Oct 2021 – Jul 2023" aria-label="Axiata Digital Labs logo">
+                                <img src="assets/adl.png" alt="Axiata Digital Labs">
+                            </a>
+                            <a href="#" class="tooltip" data-tooltip="Data Analytics Consultant, LIRNEasia; Jan 2023 – Aug 2023" aria-label="LIRNEasia logo">
+                                <img src="assets/lirne.png" alt="LIRNEasia">
+                            </a>
+                            <a href="#" class="tooltip" data-tooltip="Research Intern, Meta Reality Labs x AHLab; Aug 2024 – Feb 2025" aria-label="Meta Reality Labs and AHLab logo">
+                                <img src="assets/Meta_AHL.png" alt="Meta Reality Labs × AHLab">
+                            </a>
+                        </div>
+                    </article>
                 </div>
             </section>
         </section>
 
-        <!-- Right Panel (Tabbed Content) -->
-        <section class="right-panel" aria-label="Content tabs">
-            <div class="tabs" role="tablist" aria-label="Portfolio sections">
-                <button class="tab-button active" role="tab" aria-selected="true" data-tab="research">Research</button>
-                <button class="tab-button" role="tab" aria-selected="false" data-tab="work">Work Experience</button>
-                <!-- <button class="tab-button" role="tab" aria-selected="false" data-tab="blogs">Blog</button> -->
-            </div>
-
-            <!-- Research -->
-            <div class="tab-panel active" role="tabpanel" data-tab-panel="research">
-                <h2 class="panel-title">Research Projects</h2>
+        <section class="main-tab-panel" role="tabpanel" data-tab-panel="research" aria-label="Research projects section">
+            <section class="content-section" aria-label="Research projects">
+                <div class="section-heading">
+                    <h2>Research Projects</h2>
+                </div>
 
                 <div class="projects-list">
-                    <div class="project-widget" onclick="toggleProject(this)">
+                    <!-- <div class="project-widget no-image">
+                        <h3>Interrupting Autopilot: User-Aware Interventions for Safer Interaction Moments</h3>
+                        <div class="project-content">
+                            <p>
+                                This CHI LBW 2026 paper explores how intelligent systems can detect moments of cognitive autopilot and deliver timely,
+                                user-aware interventions to support safer and more mindful interaction. The work focuses on balancing intervention effectiveness,
+                                user context, and cognitive load in real-world scenarios.
+                                Accepted at <strong>CHI LBW 2026</strong>.
+                            </p>
+                        </div>
+                    </div> -->
+
+                    <div class="project-widget">
                         <h3>User-Aware Adaptive Assistive Wearables</h3>
                         <img src="assets/SLR.png" alt="Illustration of a taxonomy for adaptive assistive wearables" class="project-image">
                         <div class="project-content">
@@ -127,25 +159,26 @@
                                 We conducted a systematic literature review of 63 papers examining how adaptive wearables sense user states,
                                 trigger context-aware interventions, and support real-time cognitive or behavioral feedback. We introduce a taxonomy
                                 of sensing modalities, adaptation triggers, and intervention strategies, and highlight key design challenges and opportunities.
-                                This work provides a foundation for developing next-generation wearables that meaningfully adapt to users’ needs.
-                                (Under review.)
+                                This work provides a foundation for developing next-generation wearables that meaningfully adapt to users' needs.
+                                This SLR is currently under review at ACM Computing Surveys. 
                             </p>
                         </div>
                     </div>
 
-                    <div class="project-widget" onclick="toggleProject(this)">
+                    <div class="project-widget">
                         <h3>Sensory Spotlight: Anticipating User Attention</h3>
                         <img src="assets/SensorySpotlight.png" alt="Example scenario showing audio-visual cues used for predicting attention shifts" class="project-image">
                         <div class="project-content">
                             <p>
-                                Sensory Spotlight explores how AI can anticipate shifts in human attention by combining audio and visual signals—similar
+                                Sensory Spotlight explores how AI can anticipate shifts in human attention by combining audio and visual signals-similar
                                 to how we react to salient events in our environment. The model predicts attention shifts and provides saliency to indicate
-                                which modality “got the spotlight,” supporting decisions about where and how feedback should appear (e.g., smart-glasses display vs. audio).
+                                which modality "got the spotlight," supporting decisions about where and how feedback should appear (e.g., smart-glasses display vs. audio).
+                                A part of this project is under review at UIST 2026, and the rest is in preparation for submission to Neurips 2026.
                             </p>
                         </div>
                     </div>
 
-                    <div class="project-widget" onclick="toggleProject(this)">
+                    <div class="project-widget">
                         <h3>VRSense: An Explainable System to Help Mitigate Cybersickness in VR Games</h3>
                         <img src="assets/VRSense.png" alt="VRSense overview image" class="project-image">
                         <div class="project-content">
@@ -158,12 +191,12 @@
                         </div>
                     </div>
 
-                    <div class="project-widget" onclick="toggleProject(this)">
+                    <div class="project-widget">
                         <h3>3D Object Transformation and Regeneration for Privacy in Mixed Reality</h3>
                         <img src="assets/FYP2.png" alt="Mixed reality privacy project image" class="project-image">
                         <div class="project-content">
                             <p>
-                                We developed a 3D–2D correspondence technique for point clouds and a 3D vision algorithm that lets users add, delete, or modify
+                                We developed a 3D-2D correspondence technique for point clouds and a 3D vision algorithm that lets users add, delete, or modify
                                 parts of a 3D object, enabling regeneration on the other end. Evaluated against simulated privacy attacks and implemented on-device
                                 for real-world feasibility. Resulted in two papers:
                                 <a href="https://openaccess.thecvf.com/content/CVPR2022/papers/Afham_CrossPoint_Self-Supervised_Cross-Modal_Contrastive_Learning_for_3D_Point_Cloud_Understanding_CVPR_2022_paper.pdf" target="_blank" rel="noopener">CrossPoint (CVPR)</a>
@@ -171,100 +204,62 @@
                             </p>
                         </div>
                     </div>
-
-                    <!-- <div class="project-widget" onclick="toggleProject(this)">
-                        <h3>GenAI-Assisted Learning Tool: Teacher Adoption and Practice</h3>
-                        <img src="assets/hopu.png" alt="Illustration for a GenAI-assisted learning tool" class="project-image">
-                        <div class="project-content">
-                            <p>
-                                This project explored how generative AI contributes to value co-creation in primary school education, and how teachers’ attitudes
-                                and impressions shape adoption. Interviews with teachers and developers focused on a GenAI-based education tool (Yuni/Hopu).
-                            </p>
-                        </div>
-                    </div> -->
                 </div>
-            </div>
+            </section>
+        </section>
 
-            <!-- Work -->
-            <div class="tab-panel" role="tabpanel" data-tab-panel="work">
-                <h2 class="panel-title">Work Experience</h2>
-
-                <div class="card-list">
-                    <article class="card">
-                <div class="card-header">
-                    <h3>Research Intern — Meta Reality Labs × Augmented Human Lab</h3>
-                    <span class="meta">Aug 2024 – Feb 2025</span>
+        <section class="main-tab-panel" role="tabpanel" data-tab-panel="work" aria-label="Work experience section">
+            <section class="content-section" aria-label="Work experience">
+                <div class="section-heading">
+                    <h2>Work Experience</h2>
                 </div>
-                <ul>
-                    <li>Led the design and execution of a large-scale VR gameplay user study (N=150), investigating motion sickness during active VR interactions.</li>
-                    <li>Collected and synchronized multimodal high-frequency data including eye tracking, head motion, and physiological signals in real-world XR settings.</li>
-                    <li>Developed machine learning models to predict real-time discomfort and cybersickness onset during gameplay.</li>
-                    <li>Built robust data pipelines for aligning heterogeneous sensor streams at scale.</li>
-                    <li>Translated model outputs into actionable insights for VR game evaluation on VR gaming platforms.</li>
-                    <!-- <li>Resulted in a CHI 2025 Late-Breaking Work poster (<em>VRSense</em>).</li> -->
-                </ul>
-            </article>
-
-            <article class="card">
-                <div class="card-header">
-                    <h3>Data Engineer — Axiata Digital Labs</h3>
-                    <span class="meta">May 2022 – Aug 2023</span>
-                </div>
-                <ul>
-                    <li>Engineered scalable ML/DL deployment pipelines for the company’s AI Factory platform, supporting model development, testing, and production integration.</li>
-                    <li>Designed and maintained data ingestion and model integration workflows across multiple telecom business domains.</li>
-                    <li>Developed and deployed a customer churn prediction model with end-to-end pipelines, enabling data-driven decision making for enterprise clients.</li>
-                    <li>Worked across AWS and GCP environments to support reliable, production-grade ML systems.</li>
-                    <li>Collaborated with product and engineering teams to bridge research prototypes and real-world business applications.</li>
-                </ul>
-            </article>
-
-            <article class="card">
-                <div class="card-header">
-                    <h3>Data Analytics Consultant — LIRNEasia</h3>
-                    <span class="meta">Jan 2023 – Aug 2023</span>
-                </div>
-                <ul>
-                    <li>Designed and implemented ML pipelines for classifying built-up regions from satellite imagery to support a national-scale urbanization index.</li>
-                    <li>Integrated geospatial workflows using QGIS and Google Earth Engine for automated spatial analysis and visualization.</li>
-                    <li>Built longitudinal datasets to study household energy consumption patterns across regions and time.</li>
-                    <li>Collaborated with policy researchers to translate data-driven findings into evidence-based insights for urban planning.</li>
-                </ul>
-            </article>
-
-                </div>
-                <!-- <p class="note">Tip: You can expand this section with 1–2 bullet “highlights” per role and links to public writeups (if available).</p> -->
-            </div>
-
-            <!-- Blog -->
-            <!-- <div class="tab-panel" role="tabpanel" data-tab-panel="blogs">
-                <h2 class="panel-title">Blog</h2>
 
                 <div class="card-list">
                     <article class="card">
                         <div class="card-header">
-                            <h3>Coming soon</h3>
-                            <span class="meta">Writing in progress</span>
+                            <h3>Research Intern - Meta Reality Labs x Augmented Human Lab</h3>
+                            <span class="meta">Aug 2024 - Feb 2025</span>
                         </div>
-                        <p>
-                            I’m planning to share short posts on adaptive wearables, multimodal fusion, research workflows, and practical lessons from building prototypes.
-                        </p>
+                        <p class="role-summary">Led multimodal XR user studies and predictive modeling for real-time cybersickness assessment.</p>
                         <ul>
-                            <li><b>Possible topics:</b> “Designing intervention triggers for wearables”, “Explaining model behavior to users”, “From lab prototype to deployment”.</li>
-                            <li><b>Format:</b> 5–10 minute reads with visuals and references.</li>
+                            <li>Led the design and execution of a large-scale VR gameplay user study (<strong>N=150</strong>), investigating motion sickness during active VR interactions.</li>
+                            <li>Collected and synchronized multimodal high-frequency data including eye tracking, head motion, and physiological signals in real-world XR settings.</li>
+                            <li>Developed machine learning models to predict real-time discomfort and cybersickness onset during gameplay.</li>
+                            <li>Built robust data pipelines for aligning heterogeneous sensor streams at scale.</li>
+                            <li>Translated model outputs into actionable insights for VR game evaluation on VR gaming platforms.</li>
                         </ul>
                     </article>
 
-                    Example blog card (duplicate and edit when you have posts) -->
-                    <!-- <article class="card muted">
+                    <article class="card">
                         <div class="card-header">
-                            <h3>Example post template</h3>
-                            <span class="meta">Add a link later</span>
+                            <h3>Data Engineer - Axiata Digital Labs</h3>
+                            <span class="meta">May 2022 - Aug 2023</span>
                         </div>
-                        <p>Title, one-paragraph summary, and 2–3 bullets on what the reader will learn.</p>
+                        <p class="role-summary">Built and productionized ML pipelines across telecom domains on cloud infrastructure.</p>
+                        <ul>
+                            <li>Engineered scalable ML/DL deployment pipelines for the company's AI Factory platform, supporting model development, testing, and production integration.</li>
+                            <li>Designed and maintained data ingestion and model integration workflows across multiple telecom business domains.</li>
+                            <li>Developed and deployed a customer churn prediction model with end-to-end pipelines, enabling data-driven decision making for enterprise clients.</li>
+                            <li>Worked across <strong>AWS and GCP</strong> environments to support reliable, production-grade ML systems.</li>
+                            <li>Collaborated with product and engineering teams to bridge research prototypes and real-world business applications.</li>
+                        </ul>
                     </article>
-                </div> --> 
-            <!-- </div> -->
+
+                    <article class="card">
+                        <div class="card-header">
+                            <h3>Data Analytics Consultant - LIRNEasia</h3>
+                            <span class="meta">Jan 2023 - Aug 2023</span>
+                        </div>
+                        <p class="role-summary">Delivered geospatial ML workflows and longitudinal datasets to support policy-focused analytics.</p>
+                        <ul>
+                            <li>Designed and implemented ML pipelines for classifying built-up regions from satellite imagery to support a national-scale urbanization index.</li>
+                            <li>Integrated geospatial workflows using QGIS and Google Earth Engine for automated spatial analysis and visualization.</li>
+                            <li>Built longitudinal datasets to study household energy consumption patterns across regions and time.</li>
+                            <li>Collaborated with policy researchers to translate data-driven findings into evidence-based insights for urban planning.</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
         </section>
     </main>
 
@@ -275,55 +270,27 @@
     <!-- Existing project expand/collapse script (kept) -->
     <script src="old/script.js"></script>
 
-    <!-- Tabs script -->
     <script>
         (function () {
-            const buttons = document.querySelectorAll(".tab-button");
-            const panels = document.querySelectorAll(".tab-panel");
+            const buttons = document.querySelectorAll('.main-tab-button');
+            const panels = document.querySelectorAll('.main-tab-panel');
 
             function setActive(tabName) {
-                buttons.forEach(btn => {
+                buttons.forEach((btn) => {
                     const isActive = btn.dataset.tab === tabName;
-                    btn.classList.toggle("active", isActive);
-                    btn.setAttribute("aria-selected", isActive ? "true" : "false");
+                    btn.classList.toggle('active', isActive);
+                    btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
                 });
 
-                panels.forEach(panel => {
-                    panel.classList.toggle("active", panel.dataset.tabPanel === tabName);
+                panels.forEach((panel) => {
+                    panel.classList.toggle('active', panel.dataset.tabPanel === tabName);
                 });
             }
 
-            buttons.forEach(btn => {
-                btn.addEventListener("click", () => setActive(btn.dataset.tab));
+            buttons.forEach((btn) => {
+                btn.addEventListener('click', () => setActive(btn.dataset.tab));
             });
         })();
-    </script>
-
-    <script>
-        function lockRightToLeftHeight() {
-            const left = document.querySelector('.about-me');
-            const right = document.querySelector('.right-panel'); // <-- change if needed
-            if (!left || !right) return;
-
-            right.style.maxHeight = left.offsetHeight + 'px';
-            right.style.overflowY = 'auto';
-        }
-
-        window.addEventListener('load', lockRightToLeftHeight);
-        window.addEventListener('resize', lockRightToLeftHeight);
-
-        // Recompute when accordion expands/collapses
-        document.addEventListener('click', (e) => {
-            if (e.target.closest('.project-widget')) {
-            setTimeout(lockRightToLeftHeight, 50);
-            }
-        });
-
-        // Track left-panel size changes (fonts/images/responsive)
-        const leftPanel = document.querySelector('.about-me');
-        if (leftPanel && 'ResizeObserver' in window) {
-            new ResizeObserver(lockRightToLeftHeight).observe(leftPanel);
-        }
     </script>
 
 </body>

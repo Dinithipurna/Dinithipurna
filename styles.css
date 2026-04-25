@@ -24,7 +24,10 @@ body{
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: var(--bg);
+  background:
+    radial-gradient(circle at top left, rgba(11,95,255,0.08), transparent 34%),
+    radial-gradient(circle at top right, rgba(11,95,255,0.05), transparent 28%),
+    var(--bg);
   color: var(--text);
   line-height: 1.6;
   font-size: 16px;
@@ -98,39 +101,41 @@ header{
    Main Layout
    ========================= */
 .container{
-  display: flex;
-  gap: 22px;
-  padding: 22px 0;
+  display: grid;
+  gap: 18px;
+  padding: 22px 0 28px;
 
-  width: min(1500px, 96vw);
+  width: min(1240px, 96vw);
   margin: 0 auto;
 }
 
-.about-me,
-.right-panel{
+.hero-card,
+.content-section{
   background: var(--panel);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   border: 1px solid var(--border);
-  overflow-y: auto;
+  overflow: hidden;
 }
 
-.about-me{
-  flex: 0 0 30%;
-  padding: 22px;
+.hero-card{
+  padding: 24px;
+  display: grid;
+  grid-template-columns: 320px minmax(0, 1fr);
+  gap: 28px;
+  align-items: center;
 }
 
-.right-panel{
-  flex: 1;
-  padding: 18px 18px 22px;
-  min-width: 0; /* prevents overflow in flex layouts */
+.hero-copy{
+  max-width: 75ch;
+  margin: 0;
 }
 
-/* Make text blocks easier to read */
-.about-me p{
-  margin: 10px 0;
+.hero-copy p{
+  margin: 12px 0;
   text-align: left;
   color: #2a2a2a;
+  font-size: 15px;
 }
 
 h2{
@@ -139,37 +144,23 @@ h2{
   letter-spacing: 0.2px;
 }
 
-.panel-title{
-  margin-top: 14px;
-}
-
 /* Profile */
-/* .profile-pic{
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  display: block;
-  margin: 14px auto 16px;
-  border: 3px solid #fff;
-  box-shadow: var(--shadow-soft);
-} */
 
 .profile-card{
-  width: 220px;
-  margin: 10px auto 18px;
+  width: 100%;
+  margin: 0;
   padding: 10px 10px 14px;
   background: #fff;
   border: 1px solid #eaeaea;
   border-radius: 16px;
   box-shadow: 0 10px 26px rgba(0,0,0,0.10);
   text-align: center;
-  transform: rotate(-0.6deg);
+  transform: none;
 }
 
 .profile-card img{
   width: 100%;
-  height: 220px;
+  height: 320px;
   object-fit: cover;
   border-radius: 14px;
   display: block;
@@ -182,6 +173,105 @@ h2{
 } */
 
 
+.main-tabs{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: sticky;
+  top: 12px;
+  z-index: 20;
+  padding: 10px;
+  margin: 0 -2px;
+  background: rgba(244,244,244,0.84);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(230,230,230,0.9);
+  border-radius: 999px;
+  box-shadow: var(--shadow-soft);
+}
+
+.main-tab-button{
+  appearance: none;
+  border: 1px solid transparent;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: #fff;
+  color: #2a2a2a;
+  font-weight: 700;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+
+.main-tab-button:hover{
+  border-color: rgba(11,95,255,0.18);
+  background: rgba(11,95,255,0.06);
+  transform: translateY(-1px);
+}
+
+.main-tab-button.active{
+  border-color: rgba(11,95,255,0.3);
+  background: rgba(11,95,255,0.12);
+  color: #0b3fbf;
+}
+
+.main-tab-panel{ display: none; }
+.main-tab-panel.active{ display: grid; gap: 18px; }
+
+.content-section{
+  padding: 22px;
+  scroll-margin-top: 90px;
+}
+
+.section-heading{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.section-heading h2{
+  margin: 0;
+}
+
+.affiliations-grid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.affiliation-block{
+  border: 1px solid var(--border);
+  background: #fafafa;
+  border-radius: 14px;
+  padding: 16px;
+}
+
+.affiliation-block h3{
+  margin: 0 0 10px;
+  font-size: 20px;
+  letter-spacing: 0.2px;
+}
+
+.affiliation-block .logos{
+  padding: 8px 0 0;
+  justify-content: center;
+  gap: 14px;
+}
+
+.affiliation-block .logos img{
+  width: 124px;
+  height: 70px;
+  object-fit: contain;
+  filter: grayscale(20%);
+}
+
+.affiliation-block .logos img:hover{
+  transform: scale(1.05);
+  filter: grayscale(0%);
+}
+
+
 /* =========================
    News
    ========================= */
@@ -191,7 +281,7 @@ h2{
   overflow-y: auto;
   border: 1px solid var(--border);
   border-radius: 10px;
-  padding: 10px 12px;
+  padding: 6px 12px;
   background: #fbfbfb;
 }
 
@@ -202,7 +292,7 @@ h2{
 }
 
 .news-list li{
-  padding: 10px 0;
+  padding: 8px 0;
   border-bottom: 1px dashed #e8e8e8;
 }
 .news-list li:last-child{ border-bottom: none; }
@@ -211,14 +301,14 @@ h2{
    Logos + Tooltips
    ========================= */
 .experience{ text-align: center; margin: 18px 0 10px; }
-.experience h2{ font-size: 20px; margin-bottom: 10px; }
+.experience h2{ font-size: 18px; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.12em; color: #444; }
 
 .logos{
   display: flex;
   justify-content: center;
   gap: 18px;
   flex-wrap: wrap;
-  padding: 10px;
+  padding: 10px 0 2px;
 }
 
 .logos img{
@@ -281,37 +371,6 @@ h2{
 /* =========================
    Tabs
    ========================= */
-.tabs{
-  display: flex;
-  gap: 10px;
-  padding: 6px;
-  background: #f6f7f9;
-  border: 1px solid var(--border);
-  border-radius: 12px;
-}
-
-.tab-button{
-  appearance: none;
-  border: 0;
-  background: transparent;
-  padding: 10px 12px;
-  border-radius: 10px;
-  cursor: pointer;
-  font-weight: 700;
-  color: #333;
-  transition: background 0.2s ease, color 0.2s ease;
-}
-
-.tab-button:hover{ background: rgba(11,95,255,0.08); }
-
-.tab-button.active{
-  background: rgba(11,95,255,0.14);
-  color: #0b3fbf;
-}
-
-.tab-panel{ display: none; margin-top: 14px; }
-.tab-panel.active{ display: block; }
-
 /* =========================
    Projects (accordion cards)
    ========================= */
@@ -322,12 +381,18 @@ h2{
 }
 
 .project-widget{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "title"
+    "image"
+    "content";
+  row-gap: 10px;
   padding: 16px;
   border-radius: 12px;
   background: #fafafa;
   border: 1px solid var(--border);
   box-shadow: var(--shadow-soft);
-  cursor: pointer;
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
@@ -337,49 +402,41 @@ h2{
 }
 
 .project-widget h3{
+  grid-area: title;
   margin: 0;
   font-size: 18px;
 }
 
-/* Collapsed: uniform thumbnail crop */
 .project-widget img{
-  width: 95%;
-  aspect-ratio: 20 / 4;
-  object-fit: cover;
+  grid-area: image;
+  width: min(560px, 100%);
+  max-height: 300px;
+  height: auto;
+  object-fit: contain;
   display: block;
-  margin: 12px auto 0;
+  margin: 0 auto;
   border-radius: 10px;
   border: 1px solid #ededed;
   background: #fff;
+  padding: 6px;
 }
-
-/* Expanded: show full image (no cropping) */
-.project-widget.expanded img{
-  width: 100%;          /* or keep 80% if you prefer */
-  max-height: 70vh;     /* prevents it from being too tall */
-  height: auto;
-
-  aspect-ratio: auto;   /* remove the fixed box */
-  object-fit: contain;  /* show the whole image */
-}
-
-
-/* Expand/collapse */
 .project-content{
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.28s ease-in-out, padding 0.28s ease-in-out;
-  padding: 10px;
-}
-
-.project-widget.expanded .project-content{
-  max-height: 600px;
-  padding-top: 10px;
+  grid-area: content;
+  max-height: none;
+  overflow: visible;
+  padding: 0;
 }
 
 .project-content p{
-  margin: 8px 0 0;
+  margin: 0;
   color: #2b2b2b;
+}
+
+.project-widget.no-image{
+  grid-template-areas:
+    "title"
+    "content";
+  row-gap: 8px;
 }
 
 /* =========================
@@ -424,6 +481,12 @@ h2{
   margin: 8px 0 0 18px;
 }
 
+.role-summary{
+  margin: 0;
+  font-size: 14px;
+  color: #3d3d3d;
+}
+
 .note{
   color: var(--muted);
   font-size: 13px;
@@ -445,9 +508,8 @@ footer{
    Responsive
    ========================= */
 @media (max-width: 980px){
-  .container{ flex-direction: column; }
-  .about-me{ flex: 1; }
-  .right-panel{ flex: 1; }
+  .container{ width: min(100%, 94vw); }
+
   .header-right{ justify-content: center; }
 }
 
@@ -463,13 +525,55 @@ footer{
   }
 
   h2{ font-size: 24px; }
-  .tabs{ flex-wrap: wrap; }
+  .main-tabs{
+    justify-content: flex-start;
+    overflow-x: auto;
+    border-radius: 18px;
+  }
+
+  .content-section,
+  .hero-card{
+    padding: 18px;
+  }
+  .hero-card{
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .profile-card{
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  .profile-card img{
+    height: 260px;
+  }
+
+  .affiliations-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .affiliation-block h3{
+    font-size: 18px;
+  }
+
+  .affiliation-block .logos img{
+    width: 110px;
+    height: 64px;
+  }
+
+  .project-widget img{
+    width: 100%;
+    max-height: 240px;
+  }
 }
 
 @media (max-width: 480px){
   .header-left h1{ font-size: 22px; }
   .header-right a{ padding: 7px 9px; }
-  .profile-pic{ width: 130px; height: 130px; }
+  .profile-card img{ height: 220px; }
+  .section-heading{
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 
