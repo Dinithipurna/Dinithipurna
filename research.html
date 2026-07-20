@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Research Projects | Dinithi Dissanayake</title>
+    <meta name="description" content="Research projects by Dinithi Dissanayake across HCI, applied AI, adaptive wearables, XR, and mixed reality privacy.">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -33,6 +34,11 @@
             <div class="projects-list">
                 <div class="project-widget" onclick="toggleProject(this)">
                     <h3>User-Aware Adaptive Assistive Wearables</h3>
+                    <div class="project-tags" aria-label="Project tags">
+                        <span>Systematic review</span>
+                        <span>Adaptive wearables</span>
+                        <span>Under review</span>
+                    </div>
                     <img src="assets/SLR.png" alt="Illustration of a taxonomy for adaptive assistive wearables" class="project-image">
                     <div class="project-content">
                         <p>
@@ -46,19 +52,47 @@
                 </div>
 
                 <div class="project-widget" onclick="toggleProject(this)">
+                    <h3>HeadRoom: Lightweight, Edge-deployable Pipeline for Adaptive Notification Routing</h3>
+                    <div class="project-tags" aria-label="Project tags">
+                        <span>Conditionally accepted to UIST 2026</span>
+                        <span>Adaptive notification routing</span>
+                        <span>Edge-deployable AI</span>
+                    </div>
+                    <img src="assets/HeadRoom.png" alt="HeadRoom overview showing audio and visual channel availability estimation for adaptive notification routing" class="project-image">
+                    <div class="project-content">
+                        <p>
+                            HeadRoom estimates visual and auditory channel availability from egocentric video and audio, then routes notifications to the
+                            sensory channel that is more available in the moment. In a controlled user study (<strong>N=25</strong>), routing notifications
+                            to the more available channel reduced response time under high perceptual load compared with routing them to the less available
+                            channel. The pipeline is lightweight, low-latency, and designed for deployment on wearable and mobile edge hardware.
+                            <a href="https://uist26headroom.github.io/HeadRoom/" target="_blank" rel="noopener">Project website</a>.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="project-widget" onclick="toggleProject(this)">
                     <h3>Sensory Spotlight: Anticipating User Attention</h3>
+                    <div class="project-tags" aria-label="Project tags">
+                        <span>Multimodal AI</span>
+                        <span>Attention prediction</span>
+                    </div>
                     <img src="assets/SensorySpotlight.png" alt="Example scenario showing audio-visual cues used for predicting attention shifts" class="project-image">
                     <div class="project-content">
                         <p>
-                            Sensory Spotlight explores how AI can anticipate shifts in human attention by combining audio and visual signals-similar
+                            Sensory Spotlight explores how AI can anticipate shifts in human attention by combining audio and visual signals, similar
                             to how we react to salient events in our environment. The model predicts attention shifts and provides saliency to indicate
-                            which modality "got the spotlight," supporting decisions about where and how feedback should appear (e.g., smart-glasses display vs. audio).
+                            which modality "got the spotlight," supporting decisions about where and how feedback should appear (e.g., smart glasses display vs. audio).
                         </p>
                     </div>
                 </div>
 
                 <div class="project-widget" onclick="toggleProject(this)">
                     <h3>VRSense: An Explainable System to Help Mitigate Cybersickness in VR Games</h3>
+                    <div class="project-tags" aria-label="Project tags">
+                        <span>CHI LBW 2025</span>
+                        <span>XR</span>
+                        <span>Explainable AI</span>
+                    </div>
                     <img src="assets/VRSense.png" alt="VRSense overview image" class="project-image">
                     <div class="project-content">
                         <p>
@@ -72,6 +106,11 @@
 
                 <div class="project-widget" onclick="toggleProject(this)">
                     <h3>3D Object Transformation and Regeneration for Privacy in Mixed Reality</h3>
+                    <div class="project-tags" aria-label="Project tags">
+                        <span>CVPR 2022</span>
+                        <span>ECCV 2022</span>
+                        <span>Mixed reality privacy</span>
+                    </div>
                     <img src="assets/FYP2.png" alt="Mixed reality privacy project image" class="project-image">
                     <div class="project-content">
                         <p>
@@ -88,7 +127,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 Dinithi Dissanayake</p>
+        <p>&copy; 2026 Dinithi Dissanayake</p>
     </footer>
 
     <script src="old/script.js"></script>

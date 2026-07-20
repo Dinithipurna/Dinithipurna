@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dinithi Dissanayake | Portfolio</title>
+    <meta name="description" content="Dinithi Dissanayake is a PhD candidate at NUS researching HCI, applied AI, adaptive wearables, and multimodal user-aware systems.">
+    <meta property="og:title" content="Dinithi Dissanayake | HCI, Computer Vision, Adaptive Wearables">
+    <meta property="og:description" content="Research portfolio for Dinithi Dissanayake, PhD candidate at NUS and member of the Augmented Human Lab.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/IMG_1157.jpg">
     <link rel="stylesheet" href="styles.css">
     <!-- Icons (Font Awesome) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -13,7 +18,7 @@
         <div class="header-container">
             <div class="header-left">
                 <h1>Dinithi Dissanayake</h1>
-                <p>HCI | Applied AI | Adaptive Wearables</p>
+                <p>HCI | Computer Vision | Adaptive Wearables</p>
             </div>
             <div class="header-right">
                 <a href="https://scholar.google.com/citations?user=BEVuaFQAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener">
@@ -50,13 +55,15 @@
                 </figure>
 
                 <div class="hero-copy">
+                    <p class="eyebrow">PhD Candidate · National University of Singapore</p>
+                    <h2>Building user-aware AI systems for adaptive, human-centered wearables.</h2>
                     <p>
                         I am a PhD candidate at the National University of Singapore, working with
                         <a href="https://ahlab.org/people/suranga-nanayakkara/" target="_blank" rel="noopener">Prof. Suranga Nanayakkara</a>
                         in the Augmented Human Lab.
                     </p>
                     <p>
-                        My research sits at the intersection of Human–Computer Interaction and Applied AI, where I explore how intelligent
+                        My research sits at the intersection of Human–Computer Interaction and Computer Vision, where I explore how intelligent
                         systems can understand people through multimodal cues, interpret user context, and adapt their responses in real time.
                         Ultimately, I aim to create wearable systems that feel less like tools and more like supportive partners.
                     </p>
@@ -64,9 +71,10 @@
                         More broadly, I enjoy building data-driven systems, spanning ML modeling, prototyping, and deployment that improve decision-making
                         and everyday user experiences.
                     </p>
-                    <p style="color: red;">
-                        I am looking for collaborators and internship opportunities in applied AI, HCI, and wearable tech. If you have an idea or project that could use my skills, please reach out!
-                    </p>
+                    <div class="opportunity-callout" role="note">
+                        <strong>Open to collaborations and internship opportunities</strong>
+                        <span>Interested in applied AI, HCI, XR, and wearable technology projects where multimodal sensing can support better real-time decisions.</span>
+                    </div>
                 </div>
             </section>
 
@@ -76,10 +84,12 @@
                 </div>
                 <div class="news-container" role="region" aria-label="News">
                     <ul class="news-list">
-                        <li><b>April 2026</b> – Presenting our workshop paper at ABAW workshop in CVPR 2026, See you in Denver!</li>
-                        <li><b>Mar 2026</b> – We were placed third at the EMI challenge at ABAW workshop in CVPR 2026!</li>
+                        <li><b>July 2026</b> – “HeadRoom” was conditionally accepted to UIST 2026.</li>
+                        <li><b>Apr 2026</b> – Presenting our workshop paper at the ABAW workshop at CVPR 2026. See you in Denver!</li>
+                        <li><b>Mar 2026</b> – Won 3rd place in the EMI Challenge at the ABAW workshop at CVPR 2026.</li>
                         <li><b>Feb 2026</b> – Our paper “Interrupting Autopilot” was accepted to CHI LBW 2026. See you in Barcelona!</li>
-                        <li><b>Jan 2026</b> – Our Literature Review on User Aware Adaptive Assistive Wearables is in review at ACM computing Surveys!</li>
+                        <li><b>Jan 2026</b> – Our literature review on user-aware adaptive assistive wearables is in review at ACM Computing Surveys.</li>
+                        <li><b>Aug 2025</b> – Gave a talk on Adaptive Cognitive Augmentations at Meta Reality Labs, Redmond, Seattle.</li>
                         <li><b>Feb 2025</b> – Our paper “VRSense” was accepted to CHI LBW 2025. See you in Japan!</li>
                         <li><b>Sep 2024</b> – Started an internship via AHLab × Meta Reality Labs collaboration.</li>
                         <li><b>Sep 2024</b> – Passed my Qualifying Examination. Now officially a PhD Candidate.</li>
@@ -153,6 +163,11 @@
 
                     <div class="project-widget">
                         <h3>User-Aware Adaptive Assistive Wearables</h3>
+                        <div class="project-tags" aria-label="Project tags">
+                            <span>Under review at ACM CSUR</span>
+                            <span>Systematic review</span>
+                            <span>Adaptive wearables</span>
+                        </div>
                         <img src="assets/SLR.png" alt="Illustration of a taxonomy for adaptive assistive wearables" class="project-image">
                         <div class="project-content">
                             <p>
@@ -166,20 +181,50 @@
                     </div>
 
                     <div class="project-widget">
+                        <h3>HeadRoom: Lightweight, Edge-deployable Pipeline for Adaptive Notification Routing</h3>
+                        <div class="project-tags" aria-label="Project tags">
+                            <span>Conditionally accepted to UIST 2026</span>
+                            <span>Adaptive notification routing</span>
+                            <span>Edge-deployable AI</span>
+                        </div>
+                        <img src="assets/pipeline2.png" alt="HeadRoom overview showing audio and visual channel availability estimation for adaptive notification routing" class="project-image">
+                        <div class="project-content">
+                            <p>
+                                HeadRoom is a lightweight, low-latency pipeline that estimates visual and auditory channel availability from egocentric
+                                video and audio, then routes notifications to the sensory channel that is more available in the moment. In a controlled
+                                user study (<strong>N=25</strong>), we found that routing notifications to the more available channel reduced response time
+                                under high perceptual load compared with routing them to the less available channel. The pipeline is designed for
+                                real-time deployment on wearable and mobile edge hardware.
+                                <a href="https://uist26headroom.github.io/HeadRoom/" target="_blank" rel="noopener">Project website</a>.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="project-widget">
                         <h3>Sensory Spotlight: Anticipating User Attention</h3>
+                        <div class="project-tags" aria-label="Project tags">
+                            <span>Multimodal AI</span>
+                            <span>Attention prediction</span>
+                            <span>Work in progress</span>
+                        </div>
                         <img src="assets/SensorySpotlight.png" alt="Example scenario showing audio-visual cues used for predicting attention shifts" class="project-image">
                         <div class="project-content">
                             <p>
-                                Sensory Spotlight explores how AI can anticipate shifts in human attention by combining audio and visual signals-similar
+                                Sensory Spotlight explores how AI can anticipate shifts in human attention by combining audio and visual signals, similar
                                 to how we react to salient events in our environment. The model predicts attention shifts and provides saliency to indicate
-                                which modality "got the spotlight," supporting decisions about where and how feedback should appear (e.g., smart-glasses display vs. audio).
-                                A part of this project is under review at UIST 2026, and the rest is in preparation for submission to Neurips 2026.
+                                which modality "got the spotlight," supporting decisions about where and how feedback should appear (e.g., smart glasses display vs. audio).
+                                Part of this project is ongoing, we have very interesting results!
                             </p>
                         </div>
                     </div>
 
                     <div class="project-widget">
                         <h3>VRSense: An Explainable System to Help Mitigate Cybersickness in VR Games</h3>
+                        <div class="project-tags" aria-label="Project tags">
+                            <span>CHI LBW 2025</span>
+                            <span>XR</span>
+                            <span>Explainable AI</span>
+                        </div>
                         <img src="assets/VRSense.png" alt="VRSense overview image" class="project-image">
                         <div class="project-content">
                             <p>
@@ -193,6 +238,11 @@
 
                     <div class="project-widget">
                         <h3>3D Object Transformation and Regeneration for Privacy in Mixed Reality</h3>
+                        <div class="project-tags" aria-label="Project tags">
+                            <span>CVPR 2022</span>
+                            <span>ECCV 2022</span>
+                            <span>Mixed reality privacy</span>
+                        </div>
                         <img src="assets/FYP2.png" alt="Mixed reality privacy project image" class="project-image">
                         <div class="project-content">
                             <p>
@@ -264,7 +314,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 Dinithi Dissanayake</p>
+        <p>&copy; 2026 Dinithi Dissanayake</p>
     </footer>
 
     <!-- Existing project expand/collapse script (kept) -->
