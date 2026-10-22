@@ -179,3 +179,27 @@
   }, { rootMargin: '-40% 0px -55% 0px' });
   map.forEach((_, id) => { const el = document.getElementById(id); if (el) io.observe(el); });
 })();
+
+/* Vision illustration: highlight matching glyphs */
+(function () {
+  const wrap = document.getElementById('vision');
+  if (!wrap) return;
+  wrap.classList.add('idle');
+  const nodes = wrap.querySelectorAll('.v-node');
+  const clear = () => {
+    wrap.querySelectorAll('.is-on').forEach((el) => el.classList.remove('is-on'));
+    wrap.classList.add('idle');
+  };
+  nodes.forEach((n) => {
+    const on = () => {
+      clear(); wrap.classList.remove('idle'); n.classList.add('is-on');
+      (n.dataset.glyph || '').split(' ').forEach((id) => {
+        const g = document.getElementById(id); if (g) g.classList.add('is-on');
+      });
+    };
+    n.addEventListener('mouseenter', on);
+    n.addEventListener('focus', on);
+    n.addEventListener('mouseleave', clear);
+    n.addEventListener('blur', clear);
+  });
+})();

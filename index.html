@@ -120,37 +120,114 @@
       <a class="btn btn-small" href="mailto:dinithi@ahlab.org">Email me</a>
     </section>
 
-    <!-- ============ RESEARCH MAP ============ -->
+    <!-- ============ VISION ============ -->
     <section class="wrap section" id="research" aria-labelledby="research-h">
       <div class="section-head">
-        <h2 id="research-h">How the work fits together</h2>
-        <p>An assistive wearable sits between the world and the person. My thesis asks what it can learn about the wearer from egocentric signals, and how that should change the way it helps.</p>
+        <h2 id="research-h">My vision</h2>
+        <p>Wearables that adapt to the person wearing them. Most assistants react to the scene: what the camera sees and the microphone hears. I want them to also read the wearer, their attention, load and state, and change when and how they help.</p>
       </div>
 
-      <div class="map" role="list">
-        <a class="map-node node-in" role="listitem" href="#p-spotlight">
-          <span class="map-q">What is about to grab or shift your attention?</span>
-          <span class="map-p">Sensory Spotlight</span>
-          <span class="map-s">Input side, ongoing</span>
-        </a>
-        <div class="map-person" aria-hidden="true">
-          <svg viewBox="0 0 120 70" width="120" height="70">
-            <path d="M8 26 Q8 14 22 14 H50 Q58 14 60 22 Q62 14 70 14 H98 Q112 14 112 26 V36 Q112 54 92 54 H78 Q64 54 62 38 Q60 32 58 38 Q56 54 42 54 H28 Q8 54 8 36 Z" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round"/>
-            <circle cx="35" cy="34" r="6" class="dot-eye"/>
-            <path d="M88 28 q6 6 0 12 M94 24 q10 10 0 20" fill="none" class="dot-ear" stroke-width="3" stroke-linecap="round"/>
-          </svg>
-          <span>The wearer</span>
+      <div class="vision" id="vision">
+        <div class="v-col v-col-read">
+          <h3 class="v-head">Reading the person</h3>
+          <a class="v-node v-read" href="#p-spotlight" data-glyph="g-gaze">
+            <span class="v-tag">Ongoing</span>
+            <b>Sensory Spotlight</b>
+            <span class="v-line">Forecasts when the wearer’s attention will shift, where it will land, and what they will reach for next.</span>
+          </a>
+          <a class="v-node v-read" href="https://arxiv.org/abs/2605.21869" target="_blank" rel="noopener" data-glyph="g-face">
+            <span class="v-tag">3rd place, CVPR 2026 workshop challenge</span>
+            <b>Emotion mimicry intensity</b>
+            <span class="v-line">A lightweight multimodal model that estimates how strongly someone mirrors an emotion.</span>
+          </a>
+          <a class="v-node v-read v-case" href="#p-oversight" data-glyph="g-pulse g-gaze">
+            <span class="v-tag">Case study</span>
+            <b>Looks Fine to Me</b>
+            <span class="v-line">Behavioral and physiological signs that a person has stopped really checking an AI agent’s work.</span>
+          </a>
         </div>
-        <a class="map-node node-out" role="listitem" href="#p-headroom">
-          <span class="map-q">Which sense has room for a message?</span>
-          <span class="map-p">HeadRoom</span>
-          <span class="map-s">Output side, UIST 2026</span>
-        </a>
-        <a class="map-ground" role="listitem" href="#p-slr">
-          <span class="map-q">What does the field know about sensing, adaptation and intervention?</span>
-          <span class="map-p">Systematic review of 63 papers <em>(under review)</em></span>
-        </a>
+
+        <figure class="v-figure" aria-hidden="true">
+          <svg viewBox="0 0 400 400" role="presentation">
+            <defs>
+              <marker id="v-arrow-r" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                <path d="M1 1 L8 5 L1 9" fill="none" class="v-arrowhead-read" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </marker>
+              <marker id="v-arrow-a" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                <path d="M1 1 L8 5 L1 9" fill="none" class="v-arrowhead-adapt" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </marker>
+            </defs>
+
+            <!-- the loop: read (left, upward) then adapt (right, downward) -->
+            <path class="v-loop v-loop-read" d="M182 371 A172 172 0 0 1 182 29" marker-end="url(#v-arrow-r)"/>
+            <path class="v-loop v-loop-adapt" d="M218 29 A172 172 0 0 1 218 371" marker-end="url(#v-arrow-a)"/>
+
+            <!-- wearer -->
+            <g class="v-person">
+              <path d="M112 338 Q116 276 200 270 Q284 276 288 338" />
+              <path class="v-hair" d="M140 300 Q126 250 134 196 Q132 106 200 104 Q268 106 266 196 Q274 250 260 300"/>
+              <path class="v-hair" d="M146 168 Q160 126 204 120 Q232 118 250 140"/>
+              <ellipse cx="200" cy="186" rx="58" ry="68" />
+              <!-- glasses -->
+              <rect x="146" y="166" width="46" height="30" rx="11" class="v-glass"/>
+              <rect x="208" y="166" width="46" height="30" rx="11" class="v-glass"/>
+              <path d="M192 179 Q200 173 208 179 M146 176 L142 174 M254 176 L258 174" />
+              <circle cx="250" cy="170" r="4.5" class="v-cam"/>
+            </g>
+
+            <!-- reading glyphs -->
+            <g id="g-gaze" class="v-glyph v-glyph-read">
+              <path d="M58 118 Q78 100 98 118 Q78 136 58 118 Z"/>
+              <circle cx="78" cy="118" r="5" class="v-fill"/>
+              <path d="M104 124 L140 160" stroke-dasharray="3 5"/>
+            </g>
+            <g id="g-audio" class="v-glyph v-glyph-read">
+              <path d="M44 196 v8 M54 188 v24 M64 180 v40 M74 190 v20 M84 184 v32 M94 194 v12"/>
+              <path d="M104 200 L136 200" stroke-dasharray="3 5"/>
+            </g>
+            <g id="g-pulse" class="v-glyph v-glyph-read">
+              <path d="M44 282 H62 L70 266 L80 298 L88 276 L94 282 H108"/>
+              <path d="M112 280 L146 256" stroke-dasharray="3 5"/>
+            </g>
+            <g id="g-face" class="v-glyph v-glyph-read">
+              <path d="M178 222 Q200 238 222 222"/>
+            </g>
+
+            <!-- adapting glyphs -->
+            <g id="g-note" class="v-glyph v-glyph-adapt">
+              <rect x="294" y="98" width="70" height="40" rx="10"/>
+              <path d="M306 112 H348 M306 124 H334"/>
+              <path d="M262 160 L292 136" stroke-dasharray="3 5"/>
+            </g>
+            <g id="g-chime" class="v-glyph v-glyph-adapt">
+              <path d="M300 190 q10 10 0 20 M312 182 q18 18 0 36 M324 174 q26 26 0 52"/>
+              <path d="M262 200 L292 200" stroke-dasharray="3 5"/>
+            </g>
+            <g id="g-nudge" class="v-glyph v-glyph-adapt">
+              <circle cx="326" cy="282" r="9" class="v-fill"/>
+              <circle cx="326" cy="282" r="20"/>
+              <circle cx="326" cy="282" r="31" stroke-dasharray="4 6"/>
+              <path d="M262 250 L298 270" stroke-dasharray="3 5"/>
+            </g>
+          </svg>
+        </figure>
+
+        <div class="v-col v-col-adapt">
+          <h3 class="v-head">Adapting the assistance</h3>
+          <a class="v-node v-adapt" href="#p-headroom" data-glyph="g-audio g-note g-chime">
+            <span class="v-tag">UIST 2026</span>
+            <b>HeadRoom</b>
+            <span class="v-line">Routes each notification away from the sense that is overloaded: to the display, or to audio.</span>
+          </a>
+          <a class="v-node v-adapt v-case" href="https://doi.org/10.1145/3772363.3798497" target="_blank" rel="noopener" data-glyph="g-nudge">
+            <span class="v-tag">Case study, CHI 2026</span>
+            <b>Interrupting Autopilot</b>
+            <span class="v-line">Sensory interruptions that help people catch and correct a habit in the moment.</span>
+          </a>
+        </div>
       </div>
+
+      <p class="v-foot">I build the models and the systems, then test them with people. Grounded in our <a href="#p-slr">systematic review of 63 papers</a> on how wearables sense, adapt and intervene.</p>
     </section>
 
     <!-- ============ PROJECTS ============ -->
@@ -185,11 +262,26 @@
         <div class="project-text">
           <p class="status status-wip">Ongoing, unpublished</p>
           <h3>Sensory Spotlight</h3>
-          <p class="sub">Anticipating shifts in attention from audio and visual cues</p>
-          <p>We react to salient events, a sudden sound or something moving at the edge of view. Sensory Spotlight combines audio and visual signals to predict those attention shifts and shows which modality drew the spotlight. That tells a wearable where feedback should appear: on the glasses display or through audio.</p>
+          <p class="sub">Anticipating shifts in attention for proactive assistance</p>
+          <p>Proactive assistance depends on timing. Support that arrives after attention has moved is easily missed, and running every sensor continuously is costly for a device worn all day. Sensory Spotlight investigates how lightweight wearable signals, such as eye and head movement, can anticipate when a wearer’s attention is about to shift and where it will land, so that assistance, and the more demanding sensors behind it, are engaged only when they are needed.</p>
         </div>
         <figure class="project-fig">
-          <img src="assets/sensory-spotlight.webp" alt="Example scenario of audio-visual cues used to predict attention shifts." loading="lazy" width="1800" height="504">
+          <svg class="shift-fig" viewBox="0 0 600 230" role="img" aria-labelledby="shift-fig-t">
+            <title id="shift-fig-t">Gaze holds on one target, then shifts to a new one. The model forecasts the shift in the window before it happens (when) and the region where gaze will land (where). The head turns with the shift rather than before it.</title>
+            <rect x="196" y="34" width="104" height="160" rx="10" fill="#F7E3EC"/>
+            <text x="248" y="56" text-anchor="middle" class="sf-label sf-strong">When</text>
+            <text x="248" y="74" text-anchor="middle" class="sf-label">shift coming</text>
+            <line x1="40" y1="194" x2="566" y2="194" stroke="#17202A" stroke-width="2"/>
+            <path d="M560 188 L568 194 L560 200" fill="none" stroke="#17202A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <text x="566" y="216" text-anchor="end" class="sf-label">time</text>
+            <path d="M40 158 H318 C356 158 372 98 430 94 H556" fill="none" stroke="#8C96A0" stroke-width="3" stroke-dasharray="7 6" stroke-linecap="round"/>
+            <text x="556" y="116" text-anchor="end" class="sf-label">head</text>
+            <path d="M40 144 H302 L318 82 H556" fill="none" stroke="#B8326E" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <text x="44" y="134" class="sf-label sf-gaze">gaze</text>
+            <circle cx="470" cy="82" r="20" fill="none" stroke="#B8326E" stroke-width="2" stroke-dasharray="4 5"/>
+            <circle cx="470" cy="82" r="5" fill="#B8326E"/>
+            <text x="470" y="50" text-anchor="middle" class="sf-label sf-strong">Where</text>
+          </svg>
         </figure>
       </article>
 
@@ -212,6 +304,7 @@
           <p class="sub">Understanding oversight in agentic interactions</p>
           <p>As AI agents take over execution, the human job becomes oversight: noticing when an output needs a closer look. In a within-subject study with 36 participants, people completed Python tasks with a coding agent that returned correct code, a silent defect or a visible failure, while we recorded egocentric video, gaze, physiological signals and interaction logs.</p>
           <p>Participants caught visible failures readily but often missed silent defects while feeling highly confident. They ran generic checks, did not gather diagnostic evidence, or misread the evidence they had. Feeling vigilant and being vigilant are not the same thing.</p>
+          <p class="project-links"><a href="https://arxiv.org/abs/2610.27801" target="_blank" rel="noopener">Read the preprint (arXiv)</a></p>
         </div>
         <figure class="project-fig">
           <img src="assets/looks-fine-overview.webp" alt="Study setup: a participant works with a coding agent while egocentric, physiological and interaction data are recorded. The agent returns code with no defect, a blatant defect or a silent defect, and oversight is traced from general evaluation to task-relevant evaluation, defect detection and resolution." loading="lazy" width="1800" height="576">
