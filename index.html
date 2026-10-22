@@ -15,7 +15,7 @@
   <meta name="theme-color" content="#12171D" media="(prefers-color-scheme: dark)">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="site.css">
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"Person","name":"Dinithi Dissanayake","jobTitle":"PhD Candidate","affiliation":{"@type":"Organization","name":"National University of Singapore"},"url":"https://dinithidissanayake.com","sameAs":["https://scholar.google.com/citations?user=BEVuaFQAAAAJ","https://www.linkedin.com/in/dinithipurna","https://github.com/Dinithipurna"]}
@@ -48,7 +48,7 @@
             <source srcset="assets/portrait.webp" type="image/webp">
             <img class="avatar" src="assets/portrait.jpg" alt="Portrait of Dinithi Dissanayake" width="112" height="112">
           </picture>
-          <p>Hi, I’m Dinithi. PhD candidate at the National University of Singapore, in the <a href="https://ahlab.org" target="_blank" rel="noopener">Augmented Human Lab</a> with <a href="https://ahlab.org/people/suranga-nanayakkara/" target="_blank" rel="noopener">Prof. Suranga Nanayakkara</a>.</p>
+          <p>Hi, I’m Dinithi. PhD candidate at the National University of Singapore, in the <a href="https://ahlab.org" target="_blank" rel="noopener">Augmented Human Lab</a>, working with <a href="https://ahlab.org/people/suranga-nanayakkara/" target="_blank" rel="noopener">Prof. Suranga Nanayakkara</a>.</p>
         </div>
 
         <h1>Wearables that sense the person, not just the scene.</h1>
@@ -147,8 +147,8 @@
           </a>
         </div>
 
-        <figure class="v-figure" aria-hidden="true">
-          <svg viewBox="0 0 400 400" role="presentation">
+        <figure class="v-figure">
+          <svg viewBox="0 0 400 400" aria-hidden="true">
             <defs>
               <marker id="v-arrow-r" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
                 <path d="M1 1 L8 5 L1 9" fill="none" class="v-arrowhead-read" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
@@ -446,11 +446,50 @@
       <button class="btn btn-quiet" id="news-toggle" type="button" aria-controls="news-list" aria-expanded="false">Show all news</button>
     </section>
 
+    <!-- ============ OUTSIDE THE LAB ============ -->
+    <section class="wrap section" id="outside" aria-labelledby="outside-h">
+      <div class="section-head">
+        <h2 id="outside-h">Outside the lab</h2>
+        <p>Things I do whenever I feel like it.</p>
+      </div>
+      <div class="outside">
+        <article class="out-item out-dance">
+          <h3>Dancing</h3>
+          <p>I dance whenever I get the chance. Try to spot me:</p>
+          <div class="out-videos">
+            <a class="out-video" href="https://www.youtube.com/watch?v=xY5TDeF6AI4" target="_blank" rel="noopener" aria-label="Dance video 1 on YouTube">
+              <img src="https://i.ytimg.com/vi/xY5TDeF6AI4/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+              <span class="out-play" aria-hidden="true"></span>
+            </a>
+            <a class="out-video" href="https://www.youtube.com/watch?v=BH0xEpAA994" target="_blank" rel="noopener" aria-label="Dance video 2 on YouTube">
+              <img src="https://i.ytimg.com/vi/BH0xEpAA994/hqdefault.jpg" alt="" loading="lazy" width="480" height="360">
+              <span class="out-play" aria-hidden="true"></span>
+            </a>
+          </div>
+        </article>
+        <article class="out-item">
+          <h3>Photography</h3>
+          <p>I take photos of things that catch my eye and post some of them on Instagram.</p>
+          <p class="project-links"><a href="https://www.instagram.com/oddly_magical/" target="_blank" rel="noopener">@oddly_magical</a></p>
+        </article>
+        <article class="out-item out-cook">
+          <h3>Cooking</h3>
+          <p>I cook whenever the mood strikes. A few dishes that made it to a photo:</p>
+          <ul class="out-photos">
+            <li><img src="assets/cook-cheesecake.webp" alt="Cheesecake topped with strawberry slices and strawberry compote" loading="lazy" width="640" height="640"></li>
+            <li><img src="assets/cook-stringhoppers.webp" alt="String hoppers with black chicken curry, potato curry and coconut sambol" loading="lazy" width="640" height="640"></li>
+            <li><img src="assets/cook-samosa.webp" alt="Pan-fried stuffed flatbread triangles" loading="lazy" width="640" height="640"></li>
+            <li><img src="assets/cook-spread.webp" alt="Pots of stir-fried greens, rice, a coconut curry and chicken curry" loading="lazy" width="640" height="640"></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
     <!-- ============ CONTACT ============ -->
     <section class="wrap contact" aria-labelledby="contact-h">
       <h2 id="contact-h">Open to collaborations and internships</h2>
       <p>Especially in applied AI, HCI, XR and wearables, where multimodal sensing can support better decisions in the moment.</p>
-      <p><a class="btn btn-ink" href="mailto:dinithi@ahlab.org">dinithi@ahlab.org</a></p>
+      <p class="contact-cta"><a class="btn btn-ink" href="mailto:dinithi@ahlab.org">dinithi@ahlab.org</a></p>
     </section>
   </main>
 
